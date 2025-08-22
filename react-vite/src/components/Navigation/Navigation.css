@@ -1,3 +1,13 @@
 .profile-dropdown {
   position: absolute;
 }
+
+.navbar{
+display: flex;
+flex-direction: row;
+list-style-type: none;
+gap: 2.5rem;
+padding-top: 3%;
+padding-left: 2%;
+}
+
