@@ -1,5 +1,8 @@
 .profile-dropdown {
-  position: absolute;
+  position:fixed;
+  margin-top: 50px;
+  transform:translate;
+  
 }
 
 .navbar{
@@ -10,4 +13,3 @@ gap: 2.5rem;
 padding-top: 3%;
 padding-left: 2%;
 }
-

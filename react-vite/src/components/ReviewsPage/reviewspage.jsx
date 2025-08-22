@@ -11,9 +11,13 @@ function ReviewsPage() {
     const [starRating, setStarRating] = useState(0);
     const [starHover, setStarHover] = useState(0);
     const [reviews, setReviews] = useState(() => {
-        const item = getItem("count");
-        return item || 0;
+        const item = localStorage.getItem("reviews");
+        return item ? JSON.parse(item) : [];
     });
+
+    useEffect(() => {
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+    }, [reviews]);
 
     const handleReviewChange = (e) => {
         setReview(e.target.value)

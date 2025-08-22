@@ -12,7 +12,7 @@ function HomePage() {
     return (
         <div className="dashboard-content">
 
-     <h1> Welcome {user?.firstName}!</h1>
+     <h1> Welcome {user?.Username}!</h1>
 
      <div className="itinerary">
         <ItineraryPage
