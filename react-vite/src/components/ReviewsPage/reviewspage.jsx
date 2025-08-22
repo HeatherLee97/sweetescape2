@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import './reviewspage.css'
 import { NavLink } from "react-router-dom";
 import { useSelector } from 'react-redux';
@@ -10,7 +10,10 @@ function ReviewsPage() {
     const [review, setReview] =useState('');
     const [starRating, setStarRating] = useState(0);
     const [starHover, setStarHover] = useState(0);
-    const [reviews, setReviews] = useState([]);
+    const [reviews, setReviews] = useState(() => {
+        const item = getItem("count");
+        return item || 0;
+    });
 
     const handleReviewChange = (e) => {
         setReview(e.target.value)
